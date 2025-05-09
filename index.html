@@ -18,9 +18,10 @@
     <div class="header">
             
         <ul class="ul-header">
-            <li><a href="#" class="a-home">Home</a></li>
+            <li><a href="index.html" class="a-home">Home</a></li>
             <li><a href="#">Spaces</a></li>
-            <li><a href="#">Route</a></li>
+            <li><a href="#dashboard">Route</a></li>
+            <li><a href="help.html">Help</a></li>
        </ul> <!-- ul-header -->
 
     </div>  <!-- /header -->
@@ -46,36 +47,45 @@
         <button>Get Started</button>
     </div><!--div-welcome-->
 
-    <div class="dashboard">
+    <div id="dashboard">
 
         <div class="video-container">
           <input type="file" id="videoUpload" accept="video/*">
           <video id="videoPlayer" controls></video>
         </div> <!-- /video-container-->
       
-        <div class="info-box">
+        <div class="info-box" onclick="showInfo('available')">
           <div class="info">
             <h2>Available Spaces</h2>
             <p>Counting in progress...</p>
           </div> <!-- info-->
           <div class="arrow">></div> 
         </div> <!--info box-->
+        <div id="available-details" class="details-box" style="display: none;">
+          <p id="available-count">Available spaces:...</p>
+        </div>
       
-        <div class="info-box">
+        <div class="info-box" onclick="showInfo('occupied')">
           <div class="info">
             <h2>Occupied Spaces</h2>
             <p>Counting in progress...</p>
           </div> <!-- info-->
           <div class="arrow">></div>
         </div> <!--info box-->
+        <div id="occupied-details" class="details-box" style="display: none;">
+          <p id="occupied-count">Occupied Spaces:...</p>
+        </div>
       
-        <div class="info-box">
+        <div class="info-box" onclick="showInfo('route')">
           <div class="info">
             <h2>Best Route</h2>
             <p>Determining...</p>
           </div> <!-- info-->
           <div class="arrow">></div>
         </div> <!--info box-->
+        <div id="route-details" class="details-box" style="display: none;">
+          <p id="route-info">Best Route:...</p>
+        </div>
     </div> <!--dashboard-->
       
       <script src="js/script.js"></script>
