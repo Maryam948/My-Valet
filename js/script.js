@@ -12,7 +12,7 @@ videoUpload.addEventListener('change', function() {
   let lastOpened = null;
 
   function showInfo(type) {
-    // عناصر التفاصيل
+   
     const boxes = {
       available: document.getElementById('available-details'),
       occupied: document.getElementById('occupied-details'),
@@ -25,20 +25,17 @@ videoUpload.addEventListener('change', function() {
       occupied: 8,
       route: "A2 → B1 → C3"
     };
-
-    // إذا كان نفس العنصر مضغوط عليه، نخفيه
+ 
     if (lastOpened === type) {
       boxes[type].style.display = 'none';
       lastOpened = null;
       return;
     }
-
-    // إخفاء جميع التفاصيل أولاً
+ 
     for (let key in boxes) {
       boxes[key].style.display = 'none';
     }
-
-    // تحديث البيانات حسب النوع
+ 
     if (type === 'available') {
       document.getElementById('available-count').innerText = "Available spaces: " + data.available;
     } else if (type === 'occupied') {
@@ -46,8 +43,7 @@ videoUpload.addEventListener('change', function() {
     } else if (type === 'route') {
       document.getElementById('route-info').innerText = "Best route: " + data.route;
     }
-
-    // عرض الديف المطلوب
+ 
     boxes[type].style.display = 'block';
     lastOpened = type;
   }
