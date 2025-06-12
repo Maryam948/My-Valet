@@ -270,12 +270,14 @@ body {
   }
 
   .div-contener {
+    display: flex; /* مهم */
     flex-direction: column;
     height: auto;
     padding: 40px 0;
   }
 
   .contener-icon {
+    display: flex; /* مهم */
     flex-direction: column;
     gap: 20px;
     width: 100%;
@@ -283,11 +285,13 @@ body {
 
   .icon-home i,
   .ss i {
-    font-size: 150px;
+    font-size: 120px; /* جربت تصغير أكتر */
+    max-width: 100%;
+    height: auto;
   }
 
   .ss h3 {
-    font-size: 40px;
+    font-size: 35px;
     text-align: center;
   }
 
@@ -327,3 +331,4 @@ body {
     padding: 4px;
   }
 }
+
