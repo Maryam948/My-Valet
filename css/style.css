@@ -260,7 +260,7 @@ body {
 }
 @media (max-width: 768px) {
   .ul-header {
-     
+    flex-direction: row;
     gap: 10px;
   }
 
@@ -278,15 +278,15 @@ body {
 
   .contener-icon {
     display: flex; /* مهم */
-    flex-direction: column;
+    flex-direction: row;
     gap: 20px;
     width: 100%;
   }
 
   .icon-home i,
   .ss i {
-    font-size: 120px; /* جربت تصغير أكتر */
-    max-width: 100%;
+    font-size: 100px; /* جربت تصغير أكتر */
+    max-width: 50%;
     height: auto;
   }
 
